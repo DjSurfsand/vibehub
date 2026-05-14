@@ -1,0 +1,17 @@
+{
+  "name": "VibeHub",
+  "short_name": "VibeHub",
+  "description": "Social platform for vibecoded creations. Retro cyberpunk UI.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0A0F",
+  "theme_color": "#0A0A0F",
+  "icons": [
+    {
+      "src": "/vibehub.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
