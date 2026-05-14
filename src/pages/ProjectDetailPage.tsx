@@ -325,7 +325,13 @@ function CommentNode({
           </div>
           <p className="text-body-sm text-text-primary mt-1">{comment.body}</p>
           <div className="flex items-center gap-3 mt-2">
-            <button className="text-mono-sm text-text-dim hover:text-neon-cyan transition-colors">
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                setReplyTo(replyTo === comment.id ? null : comment.id);
+              }}
+              className="text-mono-sm text-text-dim hover:text-neon-cyan transition-colors"
+            >
               Reply
             </button>
           </div>
