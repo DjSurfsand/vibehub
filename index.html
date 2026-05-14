@@ -2,7 +2,7 @@
 <html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vibehub.svg" />
+    <link rel="icon" type="image/svg+xml" href="/vibehub/vibehub.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Primary Meta Tags -->
@@ -14,20 +14,20 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://vibehub.vercel.app/" />
+    <meta property="og:url" content="https://djsurfsand.github.io/vibehub/" />
     <meta property="og:title" content="VibeHub — Share Your Vibecoded Creations" />
     <meta property="og:description" content="A retro-cyberpunk social platform where vibecoders share their AI-built creations. Upvote, comment, and discover." />
-    <meta property="og:image" content="https://vibehub.vercel.app/vibehub-og.png" />
+    <meta property="og:image" content="https://djsurfsand.github.io/vibehub/vibehub-og.svg" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://vibehub.vercel.app/" />
+    <meta property="twitter:url" content="https://djsurfsand.github.io/vibehub/" />
     <meta property="twitter:title" content="VibeHub — Share Your Vibecoded Creations" />
     <meta property="twitter:description" content="A retro-cyberpunk social platform where vibecoders share their AI-built creations." />
-    <meta property="twitter:image" content="https://vibehub.vercel.app/vibehub-og.png" />
+    <meta property="twitter:image" content="https://djsurfsand.github.io/vibehub/vibehub-og.svg" />
 
     <!-- Manifest -->
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="manifest" href="/vibehub/manifest.json" />
 
     <!-- Preconnect to Supabase for faster API calls -->
     <link rel="preconnect" href="https://xfoclgvbifubczquxatc.supabase.co" />
@@ -36,5 +36,15 @@
   <body class="bg-bg-deep text-text-primary antialiased">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // GitHub Pages SPA routing — restore path from 404 redirect
+      (function() {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.pathname + location.search) {
+          history.replaceState(null, '', redirect);
+        }
+      })();
+    </script>
   </body>
 </html>
