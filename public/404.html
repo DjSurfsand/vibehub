@@ -6,10 +6,10 @@
   <meta name="theme-color" content="#0A0A0F" />
   <title>VibeHub</title>
   <script>
-    // GitHub Pages SPA redirect: capture the path and send to index.html
-    sessionStorage.redirect = location.pathname.replace('/vibehub', '') + location.search + location.hash;
+    // SPA redirect: capture the path and restore it after index.html loads
+    sessionStorage.redirect = location.pathname + location.search + location.hash;
   </script>
-  <meta http-equiv="refresh" content="0;URL='/vibehub/'" />
+  <meta http-equiv="refresh" content="0;URL='/'" />
 </head>
 <body>
   <p>Redirecting to VibeHub…</p>
